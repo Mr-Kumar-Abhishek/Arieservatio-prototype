@@ -8,7 +8,7 @@
 <BODY>
 
 <H1>Arieservatio JSP Snoop page</H1>
-<img src="images/jbosscorp_logo.png">
+
 
 <h2>JVM Memory Monitor</h2>
  

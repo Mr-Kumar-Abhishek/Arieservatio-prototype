@@ -10,7 +10,7 @@
 <H1>Arieservatio JSP Snoop page</H1>
 
 
-<h2>JVM Memory Monitor</h2>
+<h2>Arieservatio JVM Memory Monitor</h2>
  
  
 <table border="0" width="100%">

@@ -6,7 +6,7 @@ Apart from having a mouthful of a name this is an (or going to be) airline reser
 
 * Well all the servers access you could find it in the wiki of this repo. And please if you are a developer I don't have to point out where you will find the wiki.
 
-* Before commiting to this **upstream** repo please check on any bugs that may have crop up while programming but pushing your commits in the server porvided.
+* Before commiting to this **upstream** repo please check on any bugs that may had croped up while programming by pushing your commits in the server porvided.
 
 * If you are planning to testing your new feature or commits , you need to give your RSA SSH keys in our chatrooms or by privately mailing the repo owner. On how to make RSA SSH keys and all other information which you should know and don't know it yet will be included in the wiki of this repo soon.
 

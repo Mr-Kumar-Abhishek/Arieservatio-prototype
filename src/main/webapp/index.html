@@ -88,7 +88,7 @@
                     var ports = [];
                     function XmlParsing(xml){
                         $(xml).find("iata_airport_codes").each(function(){
-                            ports.push($(this).find("code").text()+"-"+$(this).find("airport").text());
+                            ports.push({value: $(this).find("code").text()+"-"+$(this).find("airport").text(), codez: $(this).find("code").text()});
                         })
                     }
                     function setAutoComplete() {
@@ -96,14 +96,19 @@
                             source: ports,
                             minLength: 3,
                             select: function(event, ui) {
+                                event.preventDefault();
                                 $("#to").val(ui.item.value);
+                                $("#to").val(ui.item.codez);
                             }
                         });
                         $("#from").autocomplete({
                             source: ports,
                             minLength: 3,
                             select: function(event, ui) {
+                                event.preventDefault();
                                 $("#from").val(ui.item.value);
+                                $("#from").val(ui.item.codez);
+
                             }
                         });
                     }

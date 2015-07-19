@@ -2,6 +2,13 @@
 
 Apart from having a mouthful of a name this is an (or going to be) airline reservation system.
 
+###Showcase
+
+Here are some of the areas which you would like to see which are in current development.
+
+* [HomePage](http://arieservatio-cyberware.rhcloud.com/) : Don't forget to click on the menus ;)
+* [Server Status](http://arieservatio-cyberware.rhcloud.com/snoop.jsp) : If it is down do inform us.
+
 ###contribution guidelines:
 
 * Well all the servers access you could find it in the wiki of this repo. And please if you are a developer I don't have to point out where you will find the wiki.

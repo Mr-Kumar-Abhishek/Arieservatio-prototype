@@ -88,7 +88,7 @@
                     var ports = [];
                     function XmlParsing(xml){
                         $(xml).find("iata_airport_codes").each(function(){
-                            ports.push({value: $(this).find("code").text()+"-"+$(this).find("airport").text(), codez: $(this).find("code").text()});
+                            ports.push({value: $(this).find("code").text()+" - "+$(this).find("airport").text(), codez: $(this).find("code").text()});
                         })
                     }
                     function setAutoComplete() {

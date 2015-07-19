@@ -47,10 +47,10 @@
                     <!--<p> Here will be one way form...</p> -->
                     <div class="rowings">
                         <div class="boxes">
-                            <label>From:</label><br /><input type="text" name="from">
+                            <label>From:</label><br /><input type="text" class="air-list" name="from" />
                         </div>
                         <div class="boxes">
-                            <label>To:</label><br /><input type="text" name="to">
+                            <label>To:</label><br /><input type="text" class="air-list" name="to" />
                         </div>
                     </div>
                     <div class="cleaner"></div>
@@ -82,7 +82,18 @@
             </script>
             <script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
             <script type="text/javascript">
+                var availableTags = [
+                    "patna",
+                    "delhi",
+                    "kolkata",
+                    "chennai",
+                    "frankfurt"
+                ];
                 $('#search').tabs();
+                $('.air-list').autocomplete({
+                    source: availableTags
+                });
+
             </script>
         </footer>
     </body>

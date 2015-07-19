@@ -47,10 +47,10 @@
                     <!--<p> Here will be one way form...</p> -->
                     <div class="rowings">
                         <div class="boxes">
-                            <label>From:</label><br /><input type="text" class="air-list" name="from" />
+                            <label>From:</label><br /><input type="text" class="air-list" id="from" name="from" />
                         </div>
                         <div class="boxes">
-                            <label>To:</label><br /><input type="text" class="air-list" name="to" />
+                            <label>To:</label><br /><input type="text" class="air-list" id="to" name="to" />
                         </div>
                     </div>
                     <div class="cleaner"></div>
@@ -99,11 +99,18 @@
                         })
                     }
                     function setAutoComplete() {
-                        $(".air-list").autocomplete({
+                        $("#to").autocomplete({
                             source: ports,
                             minLength: 1,
                             select: function(event, ui) {
-                                $(".air-list").val(ui.item.value);
+                                $("#to").val(ui.item.value);
+                            }
+                        });
+                        $("#from").autocomplete({
+                            source: ports,
+                            minLength: 1,
+                            select: function(event, ui) {
+                                $("#from").val(ui.item.value);
                             }
                         });
                     }

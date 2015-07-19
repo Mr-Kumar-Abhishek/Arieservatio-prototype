@@ -101,6 +101,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    min-width: 361px; /* something with jquery forms not adjusting */
 }
 
 #search {
@@ -383,13 +384,27 @@ textarea {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
+   Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width: 480px){
+    /* going out of convention to hold designs as per max width */
+    .container{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    /* going out of convention to hold designs as per max width */
+    .container{
+        width: 100%;
+    }
 }
 
 @media print,

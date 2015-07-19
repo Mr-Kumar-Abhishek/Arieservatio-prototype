@@ -19,7 +19,7 @@ Here are some of the areas which you would like to see which are in current deve
 
 * single branch, we are not following the git work flow for this repo as the server only supports one master branch we will develope in svn work flow. That is only one branch and everyone stamping in each other foots.(YaY !! for all the old fossils who still vouch for svn , okay I will stop being sarcastinc now.)
 
-* learn markdown , if you don't know till yet, it will do good for all of us. And if you are feeling a bit generous then extend our wiki. where to learn markdown ?? I am not telling, you are a developer find it out. Or wait for the wiki to have those pages/links.
+* if you don't know till yet, learn markdown , it will do good for all of us. And if you are feeling a bit generous then extend our wiki. where to learn markdown ?? I am not telling, you are a developer find it out. Or wait for the wiki to have those pages/links.
 
 ###miscellaneous:
 

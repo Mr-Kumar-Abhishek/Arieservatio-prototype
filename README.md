@@ -15,7 +15,7 @@ Here are some of the areas which you would like to see which are in current deve
 
 * Before commiting to this **upstream** repo please check on any bugs that may had croped up while programming by pushing your commits in the server porvided.
 
-* If you are planning to testing your new feature or commits , you need to give your RSA SSH keys in our chatrooms or by privately mailing the repo owner. On how to make RSA SSH keys and all other information which you should know and don't know it yet will be included in the wiki of this repo soon.
+* If you are planning to test your new feature or commits , you need to give your RSA SSH keys in our chatrooms or by privately mailing the repo owner. On how to make RSA SSH keys and all other information which you should know and don't know it yet will be included in the wiki of this repo soon.
 
 * single branch, we are not following the git work flow for this repo as the server only supports one master branch we will develop in svn work flow. That is only one branch and everyone will be stamping in each other foots.(YaY !! for all the old fossils who still vouch for svn , okay I will stop being sarcastic now.)
 

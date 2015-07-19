@@ -104,10 +104,21 @@ textarea {
     min-width: 361px; /* something with jquery forms not adjusting */
 }
 
+
+
 #search {
     margin-left: auto;
     margin-right: auto;
     max-width: 600px;
+}
+
+#search input[type="text"] {
+    min-width: 40px;
+    max-width: 40%;
+}
+
+#search label {
+    margin-left: 2%;
 }
 
 

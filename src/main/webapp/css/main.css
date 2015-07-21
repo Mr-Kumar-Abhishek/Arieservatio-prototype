@@ -101,7 +101,7 @@ textarea {
 
 }
 .container{
-    margin-top: 10%;
+    margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -124,6 +124,17 @@ textarea {
     margin-left: 1%;
     width: 49%;
 }
+
+.boxo {
+    float: left;
+    margin-left: 1%;
+    width: 30%;
+}
+
+.boxo .spiny {
+  width: 85%;
+}
+
 .rowings {
     float: left;
     width: 100%;

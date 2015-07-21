@@ -76,7 +76,24 @@
                         </div>
                     </div>
                     <div class="rowings">
-                        <br />
+                        <div class="boxo" >
+                            <br />
+                            <label>Adult <br />(Above 12 years)</label><br /><br />
+                            <input type="number" id="adult" name="adult" class="spiny" value="0"/>
+                        </div>
+                        <div class="boxo">
+                            <br />
+                            <label>Child <br />(Below 12 years)</label><br /><br />
+                            <input type="number" id="child" name="child" class="spiny" value="0"/>
+                        </div>
+                        <div class="boxo" >
+                            <br />
+                            <label>Infant <br /> (below 2 years) </label><br  /><br />
+                            <input type="number" id="infant" name="infant" class="spiny" value="0" />
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <br /><br />
                         <input type="submit" name="one-way-submit" id="one-way-submit" class="right" value="Search Flights" />
                         <div class="cleaner"></div>
                     </div>
@@ -121,6 +138,9 @@
                // if (windowSize >= 700) {
                     $("#flight-class").buttonset();    
                // }
+                $("#adult").spinner({min: 0, max: 10});
+                $("#child").spinner({min: 0, max: 10});
+                $("#infant").spinner({min: 0, max: 10});
                 $(document).ready(function() {
                     var ports = [];
                     function XmlParsing(xml){

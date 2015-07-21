@@ -55,7 +55,22 @@
                     </div>
                     <div class="rowings" >
                         <div class="boxes">
-                            <label>Departure Date:</label><br /><input type="text" class="date" name="dd" id="dd" />
+                            <br />
+                            <label>Departure Date:</label>
+                        </div>
+                        <div class="boxes">
+                            <br />
+                            <input type="text" class="date" name="dd" id="dd" />
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <br />
+                        <label>Class:</label><br /><br />
+                        <div id="flight-class">
+                            <input type="radio" name="economy" id="economy" checked="checked" /><label for="economy">Economy</label>
+                            <input type="radio" name="premium-economy" id="premium-economy" /><label for="premium-economy">Premium economy</label>
+                            <input type="radio" name="business-class" id="business-class" /><label for="business-class">Business Class</label>
+                            <input type="radio" name="first-class" id="first-class" /><label for="first-class">First Class</label>
                         </div>
                     </div>
                     <div class="cleaner"></div>
@@ -93,6 +108,7 @@
                     dateFormat: 'dd-mm-yy',
                     defaultDate: new Date()
                 })
+                $("#flight-class").buttonset();
                 $(document).ready(function() {
                     var ports = [];
                     function XmlParsing(xml){

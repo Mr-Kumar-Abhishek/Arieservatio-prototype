@@ -114,7 +114,7 @@ textarea {
     max-width: 600px;
 }
 
-#search input[type="text"] {
+#search input[type="text"],[type="date"] {
     min-width: 40px;
     max-width: 85%;
 }

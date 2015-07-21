@@ -61,7 +61,7 @@
                         </div>
                         <div class="boxes">
                             <br />
-                            <input type="text" class="date" name="dd" id="dd" />
+                            <input class="date" name="dd" id="dd" min="2012-01-01" max="2030-01-01" type="date" />
                         </div>
                     </div>
                     <div class="rowings">
@@ -131,7 +131,7 @@
                 $('#search').tabs();
                 $("#dd").datepicker({
                     inline: true,
-                    dateFormat: 'dd-mm-yy',
+                    dateFormat: 'yy-mm-dd',
                     defaultDate: new Date()
                 })
                 $("#one-way-submit").button();

@@ -101,7 +101,61 @@
                     </form>
                 </div>
                 <div id="round-trip">
-                    <p>Here would be round trip form</p>
+                    <!-- <p>Here would be round trip form</p> -->
+                    <form action="#" method="post">
+                    <div class="rowings">
+                        <div class="boxes">
+                            <label>From:</label><br /><input type="text" class="air-list" id="from-round" name="from-round" />
+                        </div>
+                        <div class="boxes">
+                            <label>To:</label><br /><input type="text" class="air-list" id="to-round" name="to" />
+                        </div>
+                    </div>
+                    <div class="rowings" >
+                        <div class="boxes">
+                            <br />
+                            <label>Departure Date:</label>
+                        </div>
+                        <div class="boxes">
+                            <br />
+                            <input class="date" name="dd-round" id="dd-round" min="2012-01-01" max="2030-01-01" type="date" />
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <br />
+                        <label>Class:</label><br /><br />
+                        <div class="cleaner"></div>
+                        <div id="flight-class-round">
+                            <input type="radio" name="flight-class-round" id="economy-round" checked="checked" /><label for="economy-round" class="radi">Economy</label>
+                            <input type="radio" name="flight-class-round" id="premium-economy-round" /><label for="premium-economy-round" class="radi">Premium economy</label>
+                            <input type="radio" name="flight-class-round" id="business-class-round" /><label for="business-class-round" class="radi">Business Class</label>
+                            <input type="radio" name="flight-class-round" id="first-class-round" /><label for="first-class-round" class="radi">First Class</label>
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <div class="boxo" >
+                            <br />
+                            <label>Adult <br />(Above 12 years)</label><br /><br />
+                            <input type="number" id="adult-round" name="adult-round" class="spiny" value="0"/>
+                        </div>
+                        <div class="boxo">
+                            <br />
+                            <label>Child <br />(Below 12 years)</label><br /><br />
+                            <input type="number" id="child-round" name="child-round" class="spiny" value="0"/>
+                        </div>
+                        <div class="boxo" >
+                            <br />
+                            <label>Infant <br /> (below 2 years) </label><br  /><br />
+                            <input type="number" id="infant-round" name="infant-round" class="spiny" value="0" />
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <br /><br />
+                        <input type="submit" name="round-trip-submit" id="round-trip-submit" class="right" value="Search Flights" />
+                        <div class="cleaner"></div>
+                    </div>
+                    <div class="cleaner"></div>
+                    </form>
                 </div>
                 <div id="multi-city">
                     <p>Here would be Multi City form</p>
@@ -133,14 +187,24 @@
                     inline: true,
                     dateFormat: 'yy-mm-dd',
                     defaultDate: new Date()
-                })
+                });
+                $("#dd-round").datepicker({
+                    inline: true,
+                    dateFormat: 'yy-mm-dd',
+                    defaultDate: new Date()
+                });
                 $("#one-way-submit").button();
+                $("#round-trip-submit").button();
                // if (windowSize >= 700) {
                     $("#flight-class").buttonset();    
                // }
+                $("#flight-class-round").buttonset();
                 $("#adult").spinner({min: 0, max: 10});
+                $("#adult-round").spinner({min: 0, max: 10});
                 $("#child").spinner({min: 0, max: 10});
+                $("#child-round").spinner({min: 0, max: 10});
                 $("#infant").spinner({min: 0, max: 10});
+                $("#infant-round").spinner({min: 0, max: 10});
                 $(document).ready(function() {
                     var ports = [];
                     function XmlParsing(xml){
@@ -158,6 +222,15 @@
                                 $("#to").val(ui.item.codez);
                             }
                         });
+                        $("#to-round").autocomplete({
+                            source: ports,
+                            minLength: 3,
+                            select: function(event, ui) {
+                                event.preventDefault();
+                                $("#to-round").val(ui.item.value);
+                                $("#to-round").val(ui.item.codez);
+                            }
+                        });
                         $("#from").autocomplete({
                             source: ports,
                             minLength: 3,
@@ -165,6 +238,16 @@
                                 event.preventDefault();
                                 $("#from").val(ui.item.value);
                                 $("#from").val(ui.item.codez);
+
+                            }
+                        });
+                        $("#from-round").autocomplete({
+                            source: ports,
+                            minLength: 3,
+                            select: function(event, ui) {
+                                event.preventDefault();
+                                $("#from-round").val(ui.item.value);
+                                $("#from-round").val(ui.item.codez);
 
                             }
                         });

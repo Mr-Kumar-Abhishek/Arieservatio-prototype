@@ -53,6 +53,11 @@
                             <label>To:</label><br /><input type="text" class="air-list" id="to" name="to" />
                         </div>
                     </div>
+                    <div class="rowings" >
+                        <div class="boxes">
+                            <label>Departure Date:</label><br /><input type="text" class="date" name="dd" id="dd" />
+                        </div>
+                    </div>
                     <div class="cleaner"></div>
                 </div>
                 <div id="round-trip">
@@ -83,7 +88,11 @@
             <script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
             <script type="text/javascript">
                 $('#search').tabs();
-
+                $("#dd").datepicker({
+                    inline: true,
+                    dateFormat: 'dd-mm-yy',
+                    defaultDate: new Date()
+                })
                 $(document).ready(function() {
                     var ports = [];
                     function XmlParsing(xml){

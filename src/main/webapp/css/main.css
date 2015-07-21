@@ -436,6 +436,7 @@ textarea {
     /* going out of convention to hold designs as per max width */
     .radi{
       border-radius: 5px;
+      width: 95%;
     }
 }
 

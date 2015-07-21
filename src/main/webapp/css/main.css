@@ -135,6 +135,14 @@ textarea {
   border-radius: inherit;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 
 /* ==========================================================================
     Navigation classes and styles (imported - Author(Abhishek Kumar))

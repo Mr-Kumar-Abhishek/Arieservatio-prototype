@@ -74,6 +74,11 @@
                             <input type="radio" name="flight-class" id="first-class" /><label for="first-class" class="radi">First Class</label>
                         </div>
                     </div>
+                    <div class="rowings">
+                        <br />
+                        <input type="submit" name="one-way-submit" id="one-way-submit" class="right" value="Search Flights" />
+                        <div class="cleaner"></div>
+                    </div>
                     <div class="cleaner"></div>
                 </div>
                 <div id="round-trip">
@@ -110,6 +115,7 @@
                     dateFormat: 'dd-mm-yy',
                     defaultDate: new Date()
                 })
+                $("#one-way-submit").button();
                // if (windowSize >= 700) {
                     $("#flight-class").buttonset();    
                // }

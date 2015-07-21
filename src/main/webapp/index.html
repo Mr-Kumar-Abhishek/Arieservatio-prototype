@@ -66,11 +66,12 @@
                     <div class="rowings">
                         <br />
                         <label>Class:</label><br /><br />
+                        <div class="cleaner"></div>
                         <div id="flight-class">
-                            <input type="radio" name="flight-class" id="economy" checked="checked" /><label for="economy">Economy</label>
-                            <input type="radio" name="flight-class" id="premium-economy" /><label for="premium-economy">Premium economy</label>
-                            <input type="radio" name="flight-class" id="business-class" /><label for="business-class">Business Class</label>
-                            <input type="radio" name="flight-class" id="first-class" /><label for="first-class">First Class</label>
+                            <input type="radio" name="flight-class" id="economy" checked="checked" /><label for="economy" class="radi">Economy</label>
+                            <input type="radio" name="flight-class" id="premium-economy" /><label for="premium-economy" class="radi">Premium economy</label>
+                            <input type="radio" name="flight-class" id="business-class" /><label for="business-class" class="radi">Business Class</label>
+                            <input type="radio" name="flight-class" id="first-class" /><label for="first-class" class="radi">First Class</label>
                         </div>
                     </div>
                     <div class="cleaner"></div>
@@ -102,13 +103,16 @@
             </script>
             <script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
             <script type="text/javascript">
+                var windowSize = $(window).width();
                 $('#search').tabs();
                 $("#dd").datepicker({
                     inline: true,
                     dateFormat: 'dd-mm-yy',
                     defaultDate: new Date()
                 })
-                $("#flight-class").buttonset();
+               // if (windowSize >= 700) {
+                    $("#flight-class").buttonset();    
+               // }
                 $(document).ready(function() {
                     var ports = [];
                     function XmlParsing(xml){

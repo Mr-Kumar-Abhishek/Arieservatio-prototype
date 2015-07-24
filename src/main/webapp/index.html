@@ -107,7 +107,7 @@
                             <label>From:</label><br /><input type="text" class="air-list" id="from-round" name="from-round" />
                         </div>
                         <div class="boxes">
-                            <label>To:</label><br /><input type="text" class="air-list" id="to-round" name="to" />
+                            <label>To:</label><br /><input type="text" class="air-list" id="to-round" name="to-round" />
                         </div>
                     </div>
                     <div class="rowings" >
@@ -157,7 +157,61 @@
                     </form>
                 </div>
                 <div id="multi-city">
-                    <p>Here would be Multi City form</p>
+                    <!-- <p>Here would be Multi City form </p> -->
+                    <form action="#" method="post">
+                    <div class="rowings">
+                        <div class="boxes">
+                            <label>From:</label><br /><input type="text" class="air-list" id="from-multi" name="from-multi" />
+                        </div>
+                        <div class="boxes">
+                            <label>To:</label><br /><input type="text" class="air-list" id="to-multi" name="to-multi" />
+                        </div>
+                    </div>
+                    <div class="rowings" >
+                        <div class="boxes">
+                            <br />
+                            <label>Departure Date:</label>
+                        </div>
+                        <div class="boxes">
+                            <br />
+                            <input class="date" name="dd-multi" id="dd-multi" min="2012-01-01" max="2030-01-01" type="date" />
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <br />
+                        <label>Class:</label><br /><br />
+                        <div class="cleaner"></div>
+                        <div id="flight-class-round">
+                            <input type="radio" name="flight-class-multi" id="economy-multi" checked="checked" /><label for="economy-multi" class="radi">Economy</label>
+                            <input type="radio" name="flight-class-multi" id="premium-economy-multi" /><label for="premium-economy-multi" class="radi">Premium economy</label>
+                            <input type="radio" name="flight-class-multi" id="business-class-multi" /><label for="business-class-multi" class="radi">Business Class</label>
+                            <input type="radio" name="flight-class-multi" id="first-class-multi" /><label for="first-class-multi" class="radi">First Class</label>
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <div class="boxo" >
+                            <br />
+                            <label>Adult <br />(Above 12 years)</label><br /><br />
+                            <input type="number" id="adult-multi" name="adult-multi" class="spiny" value="0"/>
+                        </div>
+                        <div class="boxo">
+                            <br />
+                            <label>Child <br />(Below 12 years)</label><br /><br />
+                            <input type="number" id="child-multi" name="child-multi" class="spiny" value="0"/>
+                        </div>
+                        <div class="boxo" >
+                            <br />
+                            <label>Infant <br /> (below 2 years) </label><br  /><br />
+                            <input type="number" id="infant-multi" name="infant-multi" class="spiny" value="0" />
+                        </div>
+                    </div>
+                    <div class="rowings">
+                        <br /><br />
+                        <input type="submit" name="multi-city-submit" id="multi-city-submit" class="right" value="Search Flights" />
+                        <div class="cleaner"></div>
+                    </div>
+                    <div class="cleaner"></div>
+                    </form>
                 </div>
 
             </div>
@@ -192,18 +246,28 @@
                     dateFormat: 'yy-mm-dd',
                     defaultDate: new Date()
                 });
+                $("#dd-multi").datepicker({
+                    inline: true,
+                    dateFormat: 'yy-mm-dd',
+                    defaultDate: new Date()
+                });
                 $("#one-way-submit").button();
                 $("#round-trip-submit").button();
+                $("#multi-city-submit").button();
                // if (windowSize >= 700) {
                     $("#flight-class").buttonset();    
                // }
                 $("#flight-class-round").buttonset();
+                $("#flight-class-multi").buttonset();
                 $("#adult").spinner({min: 0, max: 10});
                 $("#adult-round").spinner({min: 0, max: 10});
+                $("#adult-multi").spinner({min: 0, max: 10});
                 $("#child").spinner({min: 0, max: 10});
                 $("#child-round").spinner({min: 0, max: 10});
+                $("#child-multi").spinner({min: 0, max: 10});
                 $("#infant").spinner({min: 0, max: 10});
                 $("#infant-round").spinner({min: 0, max: 10});
+                $("#infant-multi").spinner({min: 0, max: 10});
                 $(document).ready(function() {
                     var ports = [];
                     function XmlParsing(xml){
@@ -230,6 +294,15 @@
                                 $("#to-round").val(ui.item.codez);
                             }
                         });
+                        $("#to-multi").autocomplete({
+                            source: ports,
+                            minLength: 3,
+                            select: function(event, ui) {
+                                event.preventDefault();
+                                $("#to-multi").val(ui.item.value);
+                                $("#to-multi").val(ui.item.codez);
+                            }
+                        });
                         $("#from").autocomplete({
                             source: ports,
                             minLength: 3,
@@ -237,7 +310,6 @@
                                 event.preventDefault();
                                 $("#from").val(ui.item.value);
                                 $("#from").val(ui.item.codez);
-
                             }
                         });
                         $("#from-round").autocomplete({
@@ -247,7 +319,15 @@
                                 event.preventDefault();
                                 $("#from-round").val(ui.item.value);
                                 $("#from-round").val(ui.item.codez);
-
+                            }
+                        });
+                        $("#from-multi").autocomplete({
+                            source: ports,
+                            minLength: 3,
+                            select: function(event, ui) {
+                                event.preventDefault();
+                                $("#from-multi").val(ui.item.value);
+                                $("#from-multi").val(ui.item.codez);
                             }
                         });
                     }
@@ -272,8 +352,6 @@
                         }
                     });
                 }
-
-
             </script>
         </footer>
     </body>

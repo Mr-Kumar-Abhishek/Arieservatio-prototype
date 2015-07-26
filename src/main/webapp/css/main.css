@@ -93,7 +93,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Author's custom styles (Abhishek Kumar)
    ========================================================================== */
 
 .cleaner {
@@ -154,6 +154,13 @@ textarea {
   float: right;
 }
 
+#from-multi-2, #from-multi-3, #from-multi-4, #from-multi-5, #from-multi-6 {
+  display: none;
+}
+
+#to-multi-2, #to-multi-3, #to-multi-4, #to-multi-5, #to-multi-6 {
+  display: none;
+}
 
 /* ==========================================================================
     Navigation classes and styles (imported - Author(Abhishek Kumar))

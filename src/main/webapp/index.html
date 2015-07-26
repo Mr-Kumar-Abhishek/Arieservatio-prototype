@@ -208,7 +208,13 @@
                         </div>
                     </div>
                     <div class="rowings">
-                        <input type="button" id="add" value="Add" />
+                        <div class="boxes">
+                        <input type="button" id="remove" value="Remove" />
+                        </div>
+                        <div class="boxes">
+                            <input type="button" id="add" value="Add" /><input type="hidden" id="multi-put" name="multi-put" value="1" />
+                        </div>
+                        <div class="cleaner"></div>
                     </div>
                     <div class="rowings" >
                         <div class="boxes">
@@ -278,6 +284,67 @@
             <script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
             <script type="text/javascript">
                // var windowSize = $(window).width();
+                var mater = 1;
+                function expander(event){
+                    if (mater === 1){
+                        $("#to-multi-2").show(1000);
+                        $("#from-multi-2").show(1000);
+                        $("#multi-put").val(2);
+                        mater = 2;
+                        $("#remove").show(1000);
+                    }else if (mater === 2) {
+                        $("#to-multi-3").show(1000);
+                        $("#from-multi-3").show(1000);
+                        $("#multi-put").val(3);
+                        mater = 3;
+                    }else if (mater === 3) {
+                        $("#to-multi-4").show(1000);
+                        $("#from-multi-4").show(1000);
+                        $("#multi-put").val(4);
+                        mater = 4;
+                    }else if (mater === 4) {
+                        $("#to-multi-5").show(1000);
+                        $("#from-multi-5").show(1000);
+                        $("#multi-put").val(5);
+                        mater = 5;
+                    }else if (mater === 5) {
+                        $("#to-multi-6").show(1000);
+                        $("#from-multi-6").show(1000);
+                        $("#multi-put").val(6);
+                        mater = 6;
+                        $("#add").hide(1000);
+                    }
+                }
+                function contractor(event){
+                    if (mater === 6) {
+                        $("#to-multi-6").hide(1000);
+                        $("#from-multi-6").hide(1000);
+                        $("#multi-put").val(5);
+                        mater = 5;
+                        $("#add").show(1000);
+                    } else if (mater === 5) {
+                        $("#to-multi-5").hide(1000);
+                        $("#from-multi-5").hide(1000);
+                        $("#multi-put").val(4);
+                        mater = 4;
+                    }  else if (mater === 4) {
+                        $("#to-multi-4").hide(1000);
+                        $("#from-multi-4").hide(1000);
+                        $("#multi-put").val(3);
+                        mater = 3;
+                    }  else if (mater === 3) {
+                        $("#to-multi-3").hide(1000);
+                        $("#from-multi-3").hide(1000);
+                        $("#multi-put").val(2);
+                        mater = 2;
+                    } else if (mater === 2) {
+                        $("#to-multi-2").hide(1000);
+                        $("#from-multi-2").hide(1000);
+                        $("#multi-put").val(1);
+                        mater = 1;
+                        $("#remove").hide(1000);
+                    }
+                } 
                 $('#search').tabs();
                 $("#dd").datepicker({
                     inline: true,
@@ -298,6 +365,9 @@
                 $("#round-trip-submit").button();
                 $("#multi-city-submit").button();
                 $("#add").button();
+                $("#add").click(expander);
+                $("#remove").button();
+                $("#remove").click(contractor);
                // if (windowSize >= 700) {
                     $("#flight-class").buttonset();    
                // }

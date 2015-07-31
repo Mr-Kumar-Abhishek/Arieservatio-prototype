@@ -8,4 +8,4 @@
 %>
 <!-- content goes here -->
 <jsp:include page="footer.jsp" />
-<jsp:inlcude page="endings.jsp" />
+<jsp:include page="endings.jsp" />

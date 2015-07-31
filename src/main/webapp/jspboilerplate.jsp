@@ -5,4 +5,4 @@
 <%@ page import="header.jsp" %>
 <!-- content goes here -->
 <%@ page import="footer.jsp" %>
-<%@ page import="endings.jsp" >
+<%@ page import="endings.jsp" %>

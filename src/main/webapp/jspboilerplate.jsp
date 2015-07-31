@@ -1,5 +1,5 @@
 <%@ page import="java.util.*" %>
-<jsp:include pag="meta-top.jsp" />
+<jsp:include page="meta-top.jsp" />
 <title>This is JSP arieservatio boilerplate</title>
 <% 
 	pageContext.include("meta-mid.jsp");

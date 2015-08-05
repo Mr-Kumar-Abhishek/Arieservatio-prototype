@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.3.208.130:3306
--- Generation Time: Aug 05, 2015 at 02:01 PM
+-- Generation Time: Aug 05, 2015 at 02:22 PM
 -- Server version: 5.5.41
 -- PHP Version: 5.3.3
 
@@ -81,6 +81,28 @@ CREATE TABLE IF NOT EXISTS `flight_schedule` (
   `arrtime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `base_fare` decimal(8,0) NOT NULL,
   PRIMARY KEY (`time_index`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tickets`
+--
+
+CREATE TABLE IF NOT EXISTS `tickets` (
+  `pnr` int(11) NOT NULL AUTO_INCREMENT,
+  `deptime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `pname` varchar(255) NOT NULL,
+  `page` int(3) unsigned NOT NULL,
+  `pgender` varchar(25) NOT NULL,
+  `address` text NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `pin` int(7) unsigned NOT NULL,
+  `tele` int(12) unsigned NOT NULL,
+  `status` int(10) unsigned NOT NULL,
+  `timing` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`pnr`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------

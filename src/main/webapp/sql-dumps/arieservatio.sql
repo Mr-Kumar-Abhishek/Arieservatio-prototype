@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.3.208.130:3306
--- Generation Time: Aug 05, 2015 at 12:00 PM
+-- Generation Time: Aug 05, 2015 at 12:06 PM
 -- Server version: 5.5.41
 -- PHP Version: 5.3.3
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `flight_schedule` (
   `flightno` varchar(255) DEFAULT NULL,
   `depcode` varchar(3) DEFAULT NULL,
   `arrcode` varchar(3) DEFAULT NULL,
-  `deptime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deptime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `arrtime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `base_fare` decimal(8,0) NOT NULL,
   PRIMARY KEY (`time_index`)

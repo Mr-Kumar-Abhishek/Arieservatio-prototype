@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.3.208.130:3306
--- Generation Time: Aug 05, 2015 at 02:29 PM
+-- Generation Time: Aug 05, 2015 at 02:49 PM
 -- Server version: 5.5.41
 -- PHP Version: 5.3.3
 
@@ -58,12 +58,11 @@ CREATE TABLE IF NOT EXISTS `flight_cap` (
 --
 
 CREATE TABLE IF NOT EXISTS `flight_master` (
-  `fid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `flightno` int(11) DEFAULT NULL,
+  `flightno` int(11) NOT NULL AUTO_INCREMENT,
   `airport` varchar(3) DEFAULT NULL,
   `onfly` tinyint(1) NOT NULL,
   `capacity` int(3) unsigned NOT NULL,
-  PRIMARY KEY (`fid`)
+  PRIMARY KEY (`flightno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------

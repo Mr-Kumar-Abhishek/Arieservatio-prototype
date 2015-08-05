@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.3.208.130:3306
--- Generation Time: Aug 05, 2015 at 12:06 PM
+-- Generation Time: Aug 05, 2015 at 02:01 PM
 -- Server version: 5.5.41
 -- PHP Version: 5.3.3
 
@@ -27,11 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `booked_seats` (
+  `bid` int(11) NOT NULL AUTO_INCREMENT,
   `pnr` int(11) unsigned NOT NULL,
   `seatno` int(3) unsigned NOT NULL,
   `time_index` int(11) unsigned NOT NULL,
-  PRIMARY KEY (`pnr`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`bid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -89,10 +90,11 @@ CREATE TABLE IF NOT EXISTS `flight_schedule` (
 --
 
 CREATE TABLE IF NOT EXISTS `waiting_list` (
+  `wid` int(11) NOT NULL AUTO_INCREMENT,
   `pnr` int(11) unsigned NOT NULL,
   `time_index` int(11) unsigned NOT NULL,
-  PRIMARY KEY (`pnr`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`wid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -38,10 +38,10 @@ try {
 	/////////////////////////////////////////
 
 	try{
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		Date parsedDate = dateFormat.parse(dd);
-		SimpleDateFormat timey = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
-		Date timeydate = timey.parse(parsedDate);
+		//SimpleDateFormat timey = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
+		//Date timeydate = timey.parse(parsedDate);
 		//Timestamp timestamp = new java.sql.Timestamp(parsedDate.getTime());
 		//	out.println(timestamp);
 		}catch(Exception e){//this generic but we can control another types of exception

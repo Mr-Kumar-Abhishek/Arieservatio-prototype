@@ -1,7 +1,8 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.util.*" %>
+<%@ page import="java.util.Date" %>
 <%@ page import="java.sql.*" %>
-<%@page import="java.text.*" %>  
+<%@ page import="java.text.*" %>  
 <% 
 try {
     String connectionURL = "jdbc:mysql://"+ System.getenv().get("OPENSHIFT_MYSQL_DB_HOST")+

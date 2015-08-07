@@ -39,9 +39,9 @@ try {
 
 	try{
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
-		Date parsedDate = dateFormat.parse(dd);
-		Timestamp timestamp = new java.sql.Timestamp(parsedDate.getTime());
-			out.println(timestamp);
+		//Date parsedDate = dateFormat.parse(dd);
+		//Timestamp timestamp = new java.sql.Timestamp(parsedDate.getTime());
+		//	out.println(timestamp);
 		}catch(Exception e){//this generic but we can control another types of exception
 			out.println("some timestamp exception");
 		}

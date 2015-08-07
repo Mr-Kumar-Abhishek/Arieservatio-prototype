@@ -9,7 +9,7 @@ try {
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     connection = DriverManager.getConnection(connectionURL, "adminQHnx2Sv", "rKFHef1xX_C3");
     if(!connection.isClosed()){
-         //out.println("Successfully connected to " + "MySQL server using TCP/IP...");
+        
 %>
 <jsp:include page="meta-top.jsp" />
 <title>Flight Search</title>
@@ -23,7 +23,25 @@ try {
 	if (stype == null) {
         out.println("Search in which one way , rountrip or muti city ??");
     } else if(stype.equals("one")){
-        pageContext.include("search-one-way.jsp");
+%>
+<p>you are here in search one way</p>
+<%
+if(request.getParameter("action") != null) {
+	String from = request.getParameter("from");
+	String to = request.getParameter("to");
+	String dd = request.getParameter("dd");
+	String flight_class = request.getParameter("flight-class");
+
+%>
+<p><%= from %></p>
+<p><%= to %></p>
+<p><%= dd %></p>
+<p><%= flight_class %></p>
+<%
+}
+%>
+
+<%
     }
 %>
 <!-- content goes here -->

@@ -48,7 +48,7 @@ try {
 
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(timestamp);
-			cal.add(Calendar.DAY_OF_WEEK, 14);
+			cal.add(Calendar.DAY_OF_WEEK, 1);
 			Timestamp futurestamp = new Timestamp(cal.getTime().getTime());
 			out.println(futurestamp);
 	}catch(Exception e){//this generic but we can control another types of exception

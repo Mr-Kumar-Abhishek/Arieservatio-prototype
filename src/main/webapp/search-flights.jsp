@@ -9,7 +9,7 @@ try {
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     connection = DriverManager.getConnection(connectionURL, "adminQHnx2Sv", "rKFHef1xX_C3");
     if(!connection.isClosed()){
-         out.println("Successfully connected to " + "MySQL server using TCP/IP...");
+         //out.println("Successfully connected to " + "MySQL server using TCP/IP...");
 %>
 <jsp:include page="meta-top.jsp" />
 <title>Flight Search</title>

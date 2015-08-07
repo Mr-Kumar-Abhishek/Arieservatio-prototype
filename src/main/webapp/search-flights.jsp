@@ -19,9 +19,10 @@ try {
 	pageContext.include("header.jsp");
 %>
 <%
-	if (request.getParameter("stype") == null) {
+	String stype = request.getPararmeter("stype");
+	if (stype == null) {
         out.println("Search in which one way , rountrip or muti city ??");
-    } else if(request.getParameter("stype") == "one"){
+    } else if(stype.equals("one")){
         pageContext.include("search-one-way.jsp");
     }
 %>

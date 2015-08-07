@@ -53,7 +53,6 @@ try {
 //			out.println(futurestamp);
 
 			int counting = -1;
-			try {
 	  			stmt = connection.createStatement();
       			rs = stmt.executeQuery("SELECT COUNT(*) FROM flight_sheddule WHERE deptime between "+timestamp+" and "+futurestamp+")");
       			SELECT * FROM table 
@@ -61,7 +60,6 @@ try {
       			rs.next();
       			rowCount = rs.getInt(1);
       			out.println(rowCount);
-			}
 	}catch(Exception e){//this generic but we can control another types of exception
 			out.println(e.getMessage());
 	}

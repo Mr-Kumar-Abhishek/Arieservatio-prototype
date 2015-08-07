@@ -2,7 +2,7 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
 <jsp:include page="meta-top.jsp" />
-<title>This is JSP arieservatio boilerplate</title>
+<title>Flight Search</title>
 <% 
 	pageContext.include("meta-mid.jsp");
 	pageContext.include("head-imports.jsp");

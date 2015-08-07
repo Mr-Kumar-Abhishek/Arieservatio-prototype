@@ -42,10 +42,19 @@ try {
 		Date parsedDate = dateFormat.parse(dd);
 		Timestamp timestamp = new java.sql.Timestamp(parsedDate.getTime());
 			out.println(timestamp);
-		}catch(Exception e){//this generic but we can control another types of exception
+	}catch(Exception e){//this generic but we can control another types of exception
 			out.println(e.getMessage());
-		}
+	}
 
+	//////////////////////////////////////////
+	// A day after////////////////////////////
+	//////////////////////////////////////////
+
+	Calendar cal = Calendar.getInstance();
+	cal.setTime(timestamp);
+	cal.add(Calendar.DAY_OF_WEEK, 14);
+	Timestamp futurestamp = new Timestamp(cal.getTime().getTime());
+		out.println(futurestamp);
 /*	int counting = -1;
 	try {
 	  stmt = connection.createStatement();

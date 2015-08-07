@@ -64,7 +64,7 @@ try {
       			//out.println(rowCount);
       			//out.println(quel);
       			if (rowCount == 0) {
-      				out.println("here will be flight search");
+      				out.println("fatal error");
       			}
 	}catch(Exception e){//this generic but we can control another types of exception
 			out.println(e.getMessage());

@@ -61,8 +61,11 @@ try {
       			// get the number of rows from the result set
       			rs.next();
       			int rowCount = rs.getInt(1);
-      			out.println(rowCount);
+      			//out.println(rowCount);
       			//out.println(quel);
+      			if (rowCount == 0) {
+      				out.println("here will be flight search");
+      			}
 	}catch(Exception e){//this generic but we can control another types of exception
 			out.println(e.getMessage());
 	}

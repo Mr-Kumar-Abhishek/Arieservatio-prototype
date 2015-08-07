@@ -30,7 +30,7 @@ try {
 	String to = request.getParameter("to");
 	String dd = request.getParameter("dd");
 	String flight_class = request.getParameter("flight-class");
-	system.out.println("okay okay");
+	out.println("okay okay");
 %>
 <p><%= from %></p>
 <p><%= to %></p>

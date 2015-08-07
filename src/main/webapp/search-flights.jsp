@@ -55,7 +55,6 @@ try {
 			int counting = -1;
 	  			stmt = connection.createStatement();
       			rs = stmt.executeQuery("SELECT COUNT(*) FROM flight_sheddule WHERE deptime between "+timestamp+" and "+futurestamp+")");
-      			SELECT * FROM table 
       			// get the number of rows from the result set
       			rs.next();
       			rowCount = rs.getInt(1);

@@ -1,6 +1,20 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
+<% 
+try {
+    String connectionURL = "jdbc:mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/arieservatio";
+    Connection connection = null; 
+    Class.forName("com.mysql.jdbc.Driver").newInstance(); 
+    connection = DriverManager.getConnection(connectionURL, "adminQHnx2Sv", "rKFHef1xX_C3");
+    if(!connection.isClosed())
+         out.println("Successfully connected to " + "MySQL server using TCP/IP...");
+    connection.close();
+}catch(Exception ex){
+    out.println("Unable to connect to database.");
+}
+%>
+
 <jsp:include page="meta-top.jsp" />
 <title>Flight Search</title>
 <% 

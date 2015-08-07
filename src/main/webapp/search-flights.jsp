@@ -41,7 +41,7 @@ try {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date parsedDate = dateFormat.parse(dd);
 		Timestamp timestamp = new java.sql.Timestamp(parsedDate.getTime());
-			out.println(timestamp);
+//			out.println(timestamp);
 			//////////////////////////////////////////
 			// A day after////////////////////////////
 			//////////////////////////////////////////
@@ -50,20 +50,24 @@ try {
 			cal.setTime(timestamp);
 			cal.add(Calendar.DAY_OF_WEEK, 1);
 			Timestamp futurestamp = new Timestamp(cal.getTime().getTime());
-			out.println(futurestamp);
+//			out.println(futurestamp);
+
+			int counting = -1;
+			try {
+	  			stmt = connection.createStatement();
+      			rs = stmt.executeQuery("SELECT COUNT(*) FROM flight_sheddule WHERE deptime between "+timestamp+" and "+futurestamp+")");
+      			SELECT * FROM table 
+      			// get the number of rows from the result set
+      			rs.next();
+      			rowCount = rs.getInt(1);
+      			out.println(rowCount);
+			}
 	}catch(Exception e){//this generic but we can control another types of exception
 			out.println(e.getMessage());
 	}
 
 
-/*	int counting = -1;
-	try {
-	  stmt = connection.createStatement();
-      rs = stmt.executeQuery("SELECT COUNT(*) FROM ");
-      // get the number of rows from the result set
-      rs.next();
-      rowCount = rs.getInt(1);
-	}
+/*	
 	*/
 %>
 <%

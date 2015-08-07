@@ -26,16 +26,34 @@ try {
 %>
 <p>you are here in search one way</p>
 <%
+
 	String from = request.getParameter("from");
 	String to = request.getParameter("to");
 	String dd = request.getParameter("dd");
 	String flight_class = request.getParameter("flight-class");
-	out.println("okay okay");
+	/// //////////////////////////////////////
+	// Date to time stamp convertor ////
+	/////////////////////////////////////////
+
+	try{
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
+		Date parsedDate = dateFormat.parse(dd);
+		Timestamp timestamp = new java.sql.Timestamp(parsedDate.getTime());
+			out.println(timestamp);
+		}catch(Exception e){//this generic but you can control another types of exception
+			out.println("some timestamp exception")
+		}
+
+/*	int counting = -1;
+	try {
+	  stmt = connection.createStatement();
+      rs = stmt.executeQuery("SELECT COUNT(*) FROM ");
+      // get the number of rows from the result set
+      rs.next();
+      rowCount = rs.getInt(1);
+	}
+	*/
 %>
-<p><%= from %></p>
-<p><%= to %></p>
-<p><%= dd %></p>
-<p><%= flight_class %></p>
 <%
     }
 %>

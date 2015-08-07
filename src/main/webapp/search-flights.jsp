@@ -56,13 +56,13 @@ try {
 
 			int counting = -1;
 	  			stmt = connection.createStatement();
-	  			String quel = "SELECT COUNT(*) FROM flight_sheddule WHERE deptime between "+timestamp+" and "+futurestamp+")";
-      			//rs = stmt.executeQuery();
+	  			String quel = "SELECT COUNT(*) FROM flight_sheddule WHERE deptime between '"+timestamp+"' and '"+futurestamp+"'";
+      			rs = stmt.executeQuery(quel);
       			// get the number of rows from the result set
-      			//rs.next();
-      			//int rowCount = rs.getInt(1);
-      			//out.println(rowCount);
-      			out.println(quel);
+      			rs.next();
+      			int rowCount = rs.getInt(1);
+      			out.println(rowCount);
+      			//out.println(quel);
 	}catch(Exception e){//this generic but we can control another types of exception
 			out.println(e.getMessage());
 	}

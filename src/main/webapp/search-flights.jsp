@@ -21,7 +21,7 @@ try {
 <%
 	if (request.getParameter("stype") == null) {
         out.println("Search in which one way , rountrip or muti city ??");
-    } else {
+    } else if(request.getParameter("stype") == "one"){
         pageContext.include("search-one-way.jsp");
     }
 %>

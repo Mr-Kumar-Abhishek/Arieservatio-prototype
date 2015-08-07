@@ -11,7 +11,7 @@ try {
          out.println("Successfully connected to " + "MySQL server using TCP/IP...");
     connection.close();
 }catch(Exception ex){
-    out.println(e.getMessage());
+    out.println(ex.getMessage());
 }
 %>
 

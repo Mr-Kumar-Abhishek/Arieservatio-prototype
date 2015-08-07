@@ -8,14 +8,9 @@ try {
     Connection connection = null; 
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     connection = DriverManager.getConnection(connectionURL, "adminQHnx2Sv", "rKFHef1xX_C3");
-    if(!connection.isClosed())
-         out.println("Successfully connected to " + "MySQL server using TCP/IP...");
-    connection.close();
-}catch(Exception ex){
-    out.println(ex.getMessage());
-}
+    if(!connection.isClosed()){
+         //out.println("Successfully connected to " + "MySQL server using TCP/IP...");
 %>
-
 <jsp:include page="meta-top.jsp" />
 <title>Flight Search</title>
 <% 
@@ -26,3 +21,11 @@ try {
 <!-- content goes here -->
 <jsp:include page="footer.jsp" />
 <jsp:include page="endings.jsp" />
+<%
+    }
+    connection.close();
+}catch(Exception ex){
+    out.println(ex.getMessage());
+}
+%>
+

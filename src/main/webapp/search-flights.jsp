@@ -3,7 +3,8 @@
 <%@ page import="java.sql.*" %>
 <% 
 try {
-    String connectionURL = "jdbc:mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/arieservatio";
+    String connectionURL = "jdbc:mysql://"+ System.getenv().get("OPENSHIFT_MYSQL_DB_HOST")+
+    					":" + System.getenv().get("OPENSHIFT_MYSQL_DB_PORT") + "/arieservatio";
     Connection connection = null; 
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
     connection = DriverManager.getConnection(connectionURL, "adminQHnx2Sv", "rKFHef1xX_C3");

@@ -18,6 +18,13 @@ try {
 	pageContext.include("head-imports.jsp");
 	pageContext.include("header.jsp");
 %>
+<%
+	if (request.getParameter("stype") == null) {
+        out.println("Search in which one way , rountrip or muti city ??");
+    } else {
+        pageContext.include("search-one-way.jsp");
+    }
+%>
 <!-- content goes here -->
 <jsp:include page="footer.jsp" />
 <jsp:include page="endings.jsp" />

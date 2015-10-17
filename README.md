@@ -11,7 +11,7 @@ Here are some of the areas which you would like to see which are in current deve
 
 ###contribution guidelines:
 
-* single branch, we are not following the git work flow for this repo as the server only supports one master branch we will develop in svn work flow. That is only one branch and everyone will be stamping in each other foots.(YaY !! for all the old fossils who still vouch for svn , okay I will stop being sarcastic now.)
+* single branch, we are not following the git work flow for this repo as the server only supports one master branch we will develop in svn work flow. That is only one branch and everyone will be stamping in each other foots.
 
 * if you don't know till yet, learn markdown , it will do good for all of us. And if you are feeling a bit generous then extend our wiki.
 

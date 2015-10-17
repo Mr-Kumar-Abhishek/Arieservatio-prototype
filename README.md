@@ -1,6 +1,6 @@
 #Arieservatio
 
-Apart from having a mouthful of a name this is an (or going to be) airline reservation system.
+Apart from having a mouthful of a name this is an (or going to be) of airline reservation simulation.
 
 ###Showcase
 
@@ -11,18 +11,16 @@ Here are some of the areas which you would like to see which are in current deve
 
 ###contribution guidelines:
 
-* Well all the servers access you could find it in the wiki of this repo. And please if you are a developer I don't have to point out where you will find the wiki.
-
-* Before commiting to this **upstream** repo please check on any bugs that may had croped up while programming by pushing your commits in the server porvided.
-
-* If you are planning to test your new feature or commits , you need to give your RSA SSH keys in our chatrooms or by privately mailing the repo owner. On how to make RSA SSH keys and all other information which you should know and don't know it yet will be included in the wiki of this repo soon.
-
 * single branch, we are not following the git work flow for this repo as the server only supports one master branch we will develop in svn work flow. That is only one branch and everyone will be stamping in each other foots.(YaY !! for all the old fossils who still vouch for svn , okay I will stop being sarcastic now.)
 
-* if you don't know till yet, learn markdown , it will do good for all of us. And if you are feeling a bit generous then extend our wiki. where to learn markdown ?? I am not telling, you are a developer find it out. Or wait for the wiki to have those pages/links.
+* if you don't know till yet, learn markdown , it will do good for all of us. And if you are feeling a bit generous then extend our wiki.
 
 ###miscellaneous:
 
 The OpenShift `jbossews` cartridge documentation can be found at:
 
 http://openshift.github.io/documentation/oo_cartridge_guide.html#tomcat
+
+###History
+
+This repository was forked from one of my old prototype projects from one of my private hosted git.

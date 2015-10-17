@@ -6,7 +6,7 @@ Apart from having a mouthful of a name this is an (or going to be) of airline re
 
 Here are some of the areas which you would like to see which are in current development.
 
-* [HomePage](http://arieservatio-cyberware.rhcloud.com/) : Don't forget to click on the menus ;)
+* [HomePage](http://arieservatio-cyberware.rhcloud.com/) : Menues don't work currently
 * [Server Status](http://arieservatio-cyberware.rhcloud.com/snoop.jsp) : If it is down do inform us.
 
 ###Contribution guidelines:

@@ -23,4 +23,4 @@ http://openshift.github.io/documentation/oo_cartridge_guide.html#tomcat
 
 ###History
 
-This repository was forked from one of my old prototype projects from one of my private hosted git.
+This repository was forked from one of my old prototype projects from one of my private hosted git server.

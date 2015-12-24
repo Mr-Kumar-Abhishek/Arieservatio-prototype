@@ -1,6 +1,6 @@
 #Arieservatio
 
-Apart from having a mouthful of a name this is an (or going to be) of airline reservation simulation.
+Apart from having a mouthful of a name this is (or going to be) an airline reservation simulation.
 
 ###Showcase
 
